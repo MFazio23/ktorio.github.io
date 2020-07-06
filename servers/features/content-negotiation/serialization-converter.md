@@ -37,13 +37,13 @@ The `serialization()` function has two optional parameters with default argument
 Advanced example:
 ```kotlin
 install(ContentNegotiation) {
-    serialization(
-        contentType = ContentType.Application.Json,
+    json(
         json = Json(
-            DefaultJsonConfiguration.copy(
+            JsonConfiguration.Stable.copy(
                 prettyPrint = true
             )
-        )
+        ),
+        contentType = ContentType.Application.Json
     )
 }
 ```
